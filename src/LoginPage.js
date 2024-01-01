@@ -3,7 +3,8 @@ import './LoginPage.css';
 
 function Page() {
   return (
-    <div className="page">
+    <div className='box--container'>
+       <div className="login--container">
       <h1 className='page--header'>Login</h1>
   
       <label>Email</label>
@@ -32,6 +33,8 @@ function Page() {
 
       <button type='submit' className='button--signIn'>Sign in</button>
     </div>
+    </div>
+   
   );
 }
 

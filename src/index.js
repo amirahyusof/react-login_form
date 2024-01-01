@@ -8,10 +8,7 @@ const display = document.getElementById('root');
 
 function App(){
   return(
-    <div style={{
-      backgroundImage: "url(/background_page.jpg)", 
-      backgroundRepeat: 'no-repeat',
-      width: '100%' }}>
+    <div className='background-page'>
       <Page />
     </div>
   )
