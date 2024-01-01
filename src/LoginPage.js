@@ -2,9 +2,30 @@ import React from 'react';
 import './LoginPage.css';
 
 function Page() {
+  const [formData, setFormData] = React.useState({
+    email: "",
+    password: "",
+    confirmPassword: ""
+  })
+
+  function handleChange(event){
+    setFormData( prevFormData => {
+      return {
+        ...prevFormData, 
+       [event.target.name] : [event.target.value]
+      }
+    })
+  }
+
+  console.log(formData)
+
+  function handleSubmit(event){
+    event.preventDefault()
+  }
+
   return (
     <div className='box--container'>
-       <div className="login--container">
+       <div className="login--container" onSubmit={handleSubmit}>
       <h1 className='page--header'>Login</h1>
   
       <label>Email</label>
@@ -12,6 +33,9 @@ function Page() {
       type='email'
       placeholder='Enter your email'
       className='page--input'
+      name='email'
+      value={formData.email}
+      onChange ={handleChange}
       />
       <br></br>
 
@@ -19,7 +43,10 @@ function Page() {
       <input
       type='password'
       placeholder='Password'
-      className='page--input' 
+      className='page--input'
+      name='password'
+      value={formData.password}
+      onChange={handleChange} 
       />
       <br></br>
 
@@ -28,6 +55,9 @@ function Page() {
       type='password'
       placeholder='Confirm Password' 
       className='page--input'
+      name='confirmPassword'
+      value={formData.confirmPassword}
+      onChange={handleChange}
       />
       <br></br>
 
