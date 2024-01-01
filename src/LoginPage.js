@@ -30,7 +30,7 @@ function Page() {
       />
       <br></br>
 
-      <button type='submit' className='button'>Submit</button>
+      <button type='submit' className='button--signIn'>Sign in</button>
     </div>
   );
 }

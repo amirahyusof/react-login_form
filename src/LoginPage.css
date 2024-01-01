@@ -1,4 +1,5 @@
 .page {
+    box-sizing: border-box;
     width: 600px;
     height: 600px;
     display: flex;
@@ -13,24 +14,33 @@
 
 }
 
+label {
+    font-size: 18px;
+}
+
 .page--header {
     margin-bottom: 10px;
     font-size: 38px;
-    
-}
-
-input {
-    height: 25px;
 }
 
 .page--input {
-    max-width: 250px;
-    background-color: white;
-    
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #bcbec0;;
+    background: #fff;   
+}
+
+.page--input::placeholder{
+    padding: 20px;
+   
 }
 
 
-.button {
-    max-width: 100px;
-    background-color: white;
+.button--signIn {
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    background: rgb(47, 94, 47);
 }
