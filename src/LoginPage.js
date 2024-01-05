@@ -95,11 +95,11 @@ function Page() {
 
         <label>Email</label>
         <div className='page--input'>
-        <br></br>
         <input 
         type='email'
         placeholder='Enter your email'
         name='email'
+        className='input--value'
         value={formData.email}
         onChange ={handleChange}
         />
@@ -108,11 +108,11 @@ function Page() {
 
         <label>Password</label>
         <div className='page--input'>
-        <br></br>
         <input
         type='password'
         placeholder='Password'
         name='password'
+        className='input--value'
         value={formData.password}
         onChange={handleChange} 
         />
@@ -125,6 +125,7 @@ function Page() {
         type='password'
         placeholder='Confirm Password'
         name='passwordConfirm'
+        className='input--value'
         value={formData.passwordConfirm}
         onChange={handleChange}
         />
