@@ -9,7 +9,7 @@ function Page() {
     passwordConfirm: ""
   })
 
-  const {register, handleSubmit, formState:{ errors }} = useForm()
+  const { register, handleSubmit, formState: {errors} } = useForm()
 
   function handleChange(event){
     const {name, value} = event.target
@@ -22,25 +22,8 @@ function Page() {
   }
 
 
-  function onSubmit(event) {
-    event.preventDefault()
-
-    if(formData.password === formData.passwordConfirm){
-      alert("Password match");
-
-    } else {
-      alert("Passwords do not match")
-
-    }
-
-    if(formData.email === ""){
-      alert("Please write your email")
-    
-    } else {
-      alert("Thank you")
-      return
-    }
-
+  const onSubmit = (data) => {
+    console.log(data)
     alert("Thank you for login")
     
   }
@@ -58,12 +41,15 @@ function Page() {
         type='email'
         placeholder='Enter your email'
         className='page--input'
-        {...register("email", {required: true, pattern:/^\S+@\S+$/i} )}
+        {...register("email", {required: true, pattern:/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/} )}
         name='email'
         value={formData.email}
         onChange ={handleChange}
         />
-        {errors.email && <p>Email is required and must be valid</p>}
+        {errors.email && errors.email.type === 'required' 
+        && (<p>Email is required</p>)}
+        {errors.email && errors.email.type === 'pattern' 
+        && (<p>Email is not valid</p>)}
         </div>
 
         <div>
@@ -73,11 +59,14 @@ function Page() {
         placeholder='Password'
         className='page--input'
         name='password'
-        {...register("password", {require:true} )}
+        {...register("password", {required:true, minLength: 6} )}
         value={formData.password}
         onChange={handleChange} 
         />
-        {errors.password && <p>Password is require</p>}
+        {errors.password &&  errors.password.type === 'required'
+        && (<p>Password is require</p>)}
+        {errors.password && errors.password.type === 'minLength'
+        && (<p>Password should be at least 6 characters</p>)}
         </div>
 
         <div>
@@ -86,7 +75,7 @@ function Page() {
         type='password'
         placeholder='Confirm Password' 
         className='page--input'
-        {...register("passwordConfirm", {require:true})}
+        {...register("passwordConfirm", {required:true})}
         name='passwordConfirm'
         value={formData.passwordConfirm}
         onChange={handleChange}
