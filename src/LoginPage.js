@@ -1,6 +1,7 @@
 import React from 'react';
 import './LoginPage.css';
 
+
 function Page() {
   const [formData, setFormData] = React.useState({
     email: "",
@@ -89,8 +90,11 @@ function Page() {
   console.log(formData)
 
   return (
-    <div className='box--container'>
-       <form className="login--container" onSubmit={handleSubmit}>
+    <div className='container'>
+      <img src={process.env.PUBLIC_URL + "/images/login-side-image.jpeg"} 
+      alt='logo' className='login--image' />
+      <div className='box--container'>
+        <form className="login--container" onSubmit={handleSubmit}>
         <h1 className='page--header'>Login</h1>
 
         <label>Email</label>
@@ -134,9 +138,9 @@ function Page() {
     
 
         <button type='submit' className='button--signIn'>Sign in</button>
-      </form>
+        </form>
+      </div>
     </div>
-   
   );
 }
 

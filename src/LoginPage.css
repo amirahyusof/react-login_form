@@ -1,20 +1,31 @@
-.box--container {
+.container {
+    display: flex;
+    flex-direction: row;
     box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+}
+
+.login--image {
+    width: 450px;
+    margin-top: 1.5%;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
 }
 
 .login--container {
-    width: 525px;
-    height: 525px;
+    width: 380px;
+    height: 450px;
     margin-top: 2.5%;
     padding: 25px;
-    padding-left: 60px;
+    padding-left: 55px;
     display: inline-flex;
     flex-direction: column;
-    border-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
     border: 3px solid  rgba(98, 200, 176, 0.28);
     background: rgba(98, 200, 176, 0.28);
     backdrop-filter: blur(0.5px);
@@ -37,7 +48,7 @@ label {
 }
 
 .input--value {
-    width: 480px;
+    width: 350px;
     height: 40px;
     border-radius: 10px;
     border: 1px solid #bcbec0;;
@@ -47,12 +58,12 @@ label {
 }
 
 .input--value::placeholder{
-    font-size: 18px;
+    font-size: 16px;
    
 }
 
 .button--signIn {
-    width: 480px;
+    width: 350px;
     height: 50px;
     margin-top: 20px;
     border-radius: 10px;
@@ -66,6 +77,10 @@ label {
 }
 
 @media (max-width: 900px){
+    .login--image {
+        max-width: 300px;
+    }
+
     .login--container {
         max-width: 300px;
         max-height: 450px;
