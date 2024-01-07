@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Installation
 ## Clone the repository
 ```bash 
-git clone https://github.com/amirahyusof/react-meme_generator.git
+git clone https://github.com/amirahyusof/react-login_form.git
 ```
 
 # Install dependencies
