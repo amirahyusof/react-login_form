@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-login_form/static/css/main.33bbd7e0.css",
+    "main.js": "/react-login_form/static/js/main.fa870336.js",
+    "static/js/787.94c57201.chunk.js": "/react-login_form/static/js/787.94c57201.chunk.js",
+    "static/media/background_page.jpg": "/react-login_form/static/media/background_page.046e15c968422a2bdfff.jpg",
+    "index.html": "/react-login_form/index.html",
+    "main.33bbd7e0.css.map": "/react-login_form/static/css/main.33bbd7e0.css.map",
+    "main.fa870336.js.map": "/react-login_form/static/js/main.fa870336.js.map",
+    "787.94c57201.chunk.js.map": "/react-login_form/static/js/787.94c57201.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33bbd7e0.css",
+    "static/js/main.fa870336.js"
+  ]
+}
